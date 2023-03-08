@@ -5,6 +5,7 @@ export default function Input(theme) {
     MuiInputBase: {
       styleOverrides: {
         root: {
+          fontSize: '14px',
           '&.Mui-disabled': {
             '& svg': { color: theme.palette.text.disabled },
           },
@@ -12,37 +13,7 @@ export default function Input(theme) {
         input: {
           '&::placeholder': {
             opacity: 1,
-            color: theme.palette.text.disabled,
-          },
-        },
-      },
-    },
-    MuiInput: {
-      styleOverrides: {
-        underline: {
-          '&:before': {
-            borderBottomColor: theme.palette.grey[500_56],
-          },
-        },
-      },
-    },
-    MuiFilledInput: {
-      styleOverrides: {
-        root: {
-          backgroundColor: theme.palette.grey[500_12],
-          '&:hover': {
-            backgroundColor: theme.palette.grey[500_16],
-          },
-          '&.Mui-focused': {
-            backgroundColor: theme.palette.action.focus,
-          },
-          '&.Mui-disabled': {
-            backgroundColor: theme.palette.action.disabledBackground,
-          },
-        },
-        underline: {
-          '&:before': {
-            borderBottomColor: theme.palette.grey[500_56],
+            color:theme.palette["$tons-neutro-text"]
           },
         },
       },
@@ -50,8 +21,11 @@ export default function Input(theme) {
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
+          backgroundColor: '#fff',
+          borderRadius: 4,
+          paddingRight: 10,
           '& .MuiOutlinedInput-notchedOutline': {
-            borderColor: theme.palette.grey[500_32],
+            borderColor: theme.palette["$tons-neutro-text"]
           },
           '&.Mui-disabled': {
             '& .MuiOutlinedInput-notchedOutline': {

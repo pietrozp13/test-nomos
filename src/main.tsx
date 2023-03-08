@@ -14,14 +14,14 @@ const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <DeputadosStateProvider>
-      <QueryClientProvider client={queryClient}>
-        <ThemeConfig>
-          <GlobalStyles />
-          <AllRoutes />
-        </ThemeConfig>
-        <ReactQueryDevtools initialIsOpen={false} />
-      </QueryClientProvider>
-    </DeputadosStateProvider>
+    <QueryClientProvider client={queryClient}>
+      <DeputadosStateProvider>
+          <ThemeConfig>
+            <GlobalStyles />
+            <AllRoutes />
+          </ThemeConfig>
+          <ReactQueryDevtools initialIsOpen={false} />
+      </DeputadosStateProvider>
+    </QueryClientProvider>
   </React.StrictMode>,
 );

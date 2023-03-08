@@ -16,6 +16,7 @@
     "@emotion/styled": "^11.10.4",
     "@fontsource/inter": "^4.5.15",
     "@fontsource/material-icons": "^4.5.4",
+    "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.10.8",
     "@tanstack/react-query": "^4.16.1",
     "@tanstack/react-query-devtools": "^4.16.1",
@@ -25,6 +26,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "6",
     "scheduler": "^0.23.0",
+    "ts-jest": "^29.0.5",
     "typescript": "^4.9.5",
     "use-context-selector": "^1.4.1"
   },

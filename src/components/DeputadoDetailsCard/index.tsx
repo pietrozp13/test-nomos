@@ -20,6 +20,8 @@ interface DeputadoType {
   phone: string;
   endereco: string;
   situacao: string;
+  condicaoEleitoral: string;
+  ultimaData: string;
 }
 
 export default function DeputadoDetailsCard(props: DeputadoType) {
@@ -32,8 +34,10 @@ export default function DeputadoDetailsCard(props: DeputadoType) {
     municipioNascimento,
     phone,
     endereco,
-    situacao, // ta faltando isso
+    situacao,
     partido,
+    condicaoEleitoral,
+    ultimaData,
   } = props;
 
   const Info = (key: string, value: string) => {
@@ -46,7 +50,7 @@ export default function DeputadoDetailsCard(props: DeputadoType) {
         >
           {key}:
         </Typography>
-        <Typography marginLeft={1} variant={'$font-body-base'} component={'p'}>
+        <Typography marginLeft={0.5} variant={'$font-body-base'} component={'p'}>
           {value}
         </Typography>
       </Box>
@@ -56,11 +60,11 @@ export default function DeputadoDetailsCard(props: DeputadoType) {
   return (
     <Box
       marginY={1}
+      // paddingX={2}
       display="flex"
       flexDirection="column"
       width={384}
       justifyContent={'space-between'}
-      paddingX={2}
       borderRadius={1}
       sx={{
         backgroundColor: "$tons-neutro-bg-secondary"
@@ -117,12 +121,12 @@ export default function DeputadoDetailsCard(props: DeputadoType) {
             color={'$tons-neutro-text'}
             component={'p'}
           >
-            TITULAR EM EXERCÍCIO 2019 - 2023 FAKEEEE
+            {situacao} - {condicaoEleitoral} - {new Date(ultimaData).getFullYear()}
           </Typography>
         </Box>
       </Box>
       <Divider />
-      <Box marginY={4}>
+      <Box marginY={4} marginX={3}>
         <Stack
           direction="column"
           spacing={4}

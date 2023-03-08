@@ -1,14 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import DeputadosList from './DeputadosList';
-import DeputadoDetails from './DeputadoDetails';
+import Header from '@/components/Header'
 
-import NotFound from './404'
+import DeputadosList from '@/pages/DeputadosList';
+import DeputadoDetails from '@/pages/DeputadoDetails';
+
+import NotFound from '@/pages/404'
 
 const AllRoutes = () => {
   return (
     <BrowserRouter>
+    <Header />
       <Routes>
         <Route path="/" element={<DeputadosList />} />
         <Route path="/deputados" element={<DeputadosList />} />

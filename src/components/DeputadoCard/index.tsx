@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import Chip from '@mui/material/Chip';
 import Button from '@mui/material/Button';
+import CallMadeIcon from '@mui/icons-material/CallMade';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -100,8 +101,10 @@ export default function DeputadoCard(props: DeputadosCard) {
           </Stack>
         </Box>
       </Box>
-      <Box>
-        <Button data-testid="detail-button" variant="contained" onClick={() => navigate(`/deputado/${id}`)}>
+      <Box display='flex' alignContent="center" alignItems="center">
+        <Button data-testid="detail-button" size='small' endIcon={<CallMadeIcon sx={{
+          transform: "rotate(15deg)",
+        }} />} variant="contained" onClick={() => navigate(`/deputado/${id}`)}>
           Detalhes
         </Button>
       </Box>

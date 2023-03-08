@@ -8,15 +8,18 @@ const instance = axios.create({
   headers: { accept: 'application/json' },
 });
 
-export const getDeputados = (page: number, quant: number) => {
+export const getDeputados = (page: number, quant: number, nameDeputado: string | null, partido: string | null, uf: string | null) => {
   const itens = quant;
   const pageSearch = page;
   const ordem = 'ASC';
   const ordenarPor = 'nome';
 
+  console.log(nameDeputado, partido, uf);
+
+
   return instance
     .get(
-      `/v2/deputados?itens=${itens}&pagina=${pageSearch}&ordem=${ordem}&ordenarPor=${ordenarPor}`,
+      `/v2/deputados?itens=${itens}&nome=${nameDeputado}&siglaUf=${uf}&siglaPartido=${partido}&pagina=${pageSearch}&ordem=${ordem}&ordenarPor=${ordenarPor}`,
       {
         headers: {
           'Content-Type': 'application/json',
