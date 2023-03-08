@@ -117,7 +117,8 @@ function DeputadosList() {
           id="demo-simple-select"
           value={quantPage}
           sx={{
-            marginLeft: 1
+            marginLeft: 1,
+            height: '36px'
           }}
           onChange={handleChangeQuantPage}
         >
