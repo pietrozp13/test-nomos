@@ -26,6 +26,8 @@ test('loads and displays greeting', async () => {
       nomeCivil='Cleber Civil'
       phone='(61)1234-5678'
       situacao='Em exercício'
+      condicaoEleitoral='Titular'
+      ultimaData='2023-03-11'
     />
   );
 
