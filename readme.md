@@ -1,26 +1,27 @@
-Teste Nomos
+# Teste Nomos
 
-Plataforma para pesquisar por deputados
+## Plataforma para pesquisar por deputados
 
-Public Demo: https://test-nomos-pzp.netlify.app
+### Public Demo: https://test-nomos-pzp.netlify.app
 
-Install: yarn
+- Install: `yarn`
 
-Run: yarn run dev
+- Run: `yarn run dev`
 
-Build: yarn run build
+- Build: `yarn run build`
 
-Unit Tests: yarn run test
+- Unit Tests: `yarn run test`
 
-E2E Tests: yarn run cypress
+- E2E Tests: `yarn run cypress`
 
-Storybook: yarn run storybook
+- Storybook: `yarn run storybook`
 
-- techs: run/configs
-  - vite
+## techs:
+  - Vite
   - material ui
   - react query
   - react router v6
   - react testing library && jest
   - Context api
   - Cypress
+  - Storybook
