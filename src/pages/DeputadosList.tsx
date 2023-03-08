@@ -58,6 +58,7 @@ function DeputadosList() {
     <Box
       display="flex"
       flexDirection="column"
+      minHeight={"100%"}
       paddingX={9}
       paddingY={7}
       sx={{
